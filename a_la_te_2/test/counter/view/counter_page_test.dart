@@ -1,7 +1,7 @@
 // Ignore for testing purposes
 // ignore_for_file: prefer_const_constructors
 
-import 'package:a_la_te_2/counter/counter.dart';
+import 'package:a_la_te_2/features/counter/counter.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,9 +13,9 @@ import '../../helpers/helpers.dart';
 class MockCounterCubit extends MockCubit<int> implements CounterCubit {}
 
 void main() {
-  group('CounterPage', () {
+  group('CounterScreen', () {
     testWidgets('renders CounterView', (tester) async {
-      await tester.pumpApp(CounterPage());
+      await tester.pumpApp(CounterScreen());
       expect(find.byType(CounterView), findsOneWidget);
     });
   });
