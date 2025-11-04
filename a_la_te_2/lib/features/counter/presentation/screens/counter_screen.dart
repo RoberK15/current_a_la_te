@@ -1,10 +1,10 @@
-import 'package:a_la_te_2/counter/counter.dart';
+import 'package:a_la_te_2/features/counter/counter.dart';
 import 'package:a_la_te_2/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
+class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,9 @@ class CounterView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().increment(),
+            onPressed: () {
+              context.read<CounterCubit>().increment();
+            },
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 8),
