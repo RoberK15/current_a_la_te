@@ -42,22 +42,31 @@ class _Body extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        if (state.status.isInitial || state.status.isLoading) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else if (state.status.isSuccess) {
-          if (state.examples.isEmpty) {
-            return const Center(
-              child: Text('No se han encontrado ejemplos.'),
-            );
-          } else {
-            return ExamplesList(examples: state.examples);
-          }
-        } else {
-          return const SizedBox.shrink();
-        }
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text('Ejemplos'),
+          ),
+          body: _buildBody(context, state),
+        );
       },
     );
+  }
+
+  Widget _buildBody(BuildContext context, ExamplesListState state) {
+    if (state.status.isInitial || state.status.isLoading) {
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
+    } else if (state.status.isSuccess) {
+      if (state.examples.isEmpty) {
+        return const Center(
+          child: Text('No se han encontrado ejemplos.'),
+        );
+      } else {
+        return ExamplesList(examples: state.examples);
+      }
+    } else {
+      return const SizedBox.shrink();
+    }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:a_la_te_2/features/counter/application/cubit/counter_state.dart';
 import 'package:a_la_te_2/features/counter/counter.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -5,21 +6,25 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('CounterCubit', () {
     test('initial state is 0', () {
-      expect(CounterCubit().state, equals(0));
+      expect(CounterCubit().state.counterValue, 0);
     });
 
-    blocTest<CounterCubit, int>(
-      'emits [1] when increment is called',
-      build: CounterCubit.new,
+    blocTest<CounterCubit, CounterState>(
+      'emits a CounterState with counterValue incremented by 1 when increment is called',
+      build: () {
+        return CounterCubit();
+      },
       act: (cubit) => cubit.increment(),
-      expect: () => [equals(1)],
+      expect: () => [const CounterState(counterValue: 1)],
     );
 
-    blocTest<CounterCubit, int>(
-      'emits [-1] when decrement is called',
-      build: CounterCubit.new,
+    blocTest<CounterCubit, CounterState>(
+      'emits a CounterState with counterValue decremented by 1 when decrement is called',
+      build: () {
+        return CounterCubit();
+      },
       act: (cubit) => cubit.decrement(),
-      expect: () => [equals(-1)],
+      expect: () => [const CounterState(counterValue: -1)],
     );
   });
 }

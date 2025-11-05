@@ -45,6 +45,7 @@ final goRouter = GoRouter(
           ),
         ),
         GoRoute(
+          parentNavigatorKey: _shellNavigatorKey,
           path: AppRoute.examplesList.path,
           name: AppRoute.examplesList.name,
           pageBuilder: (context, state) => const NoTransitionPage(
@@ -52,6 +53,7 @@ final goRouter = GoRouter(
           ),
           routes: [
             GoRoute(
+              parentNavigatorKey: _rootNavigatorKey,
               path: AppRoute.exampleDetail.path,
               name: AppRoute.exampleDetail.name,
               builder: (context, state) {
