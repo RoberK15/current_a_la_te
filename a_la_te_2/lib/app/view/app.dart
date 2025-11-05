@@ -1,5 +1,6 @@
 import 'package:a_la_te_2/core/routing/app_router.dart';
 import 'package:a_la_te_2/features/bottom_nav_bar/application/cubit/bottom_nav_bar_cubit.dart';
+import 'package:a_la_te_2/features/counter/application/cubit/counter_cubit.dart';
 import 'package:a_la_te_2/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +14,9 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(
           create:  (_) => BottomNavBarCubit()..init(),
+        ),
+        BlocProvider(
+          create: (_) => CounterCubit(),
         ),
       ],
       child: MaterialApp.router(

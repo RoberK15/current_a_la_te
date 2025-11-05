@@ -1,6 +1,7 @@
 // Ignore for testing purposes
 // ignore_for_file: prefer_const_constructors
 
+import 'package:a_la_te_2/features/counter/application/cubit/counter_state.dart';
 import 'package:a_la_te_2/features/counter/counter.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
@@ -10,12 +11,17 @@ import 'package:mocktail/mocktail.dart';
 
 import '../../helpers/helpers.dart';
 
-class MockCounterCubit extends MockCubit<int> implements CounterCubit {}
+class MockCounterCubit extends MockCubit<CounterState> implements CounterCubit {}
 
 void main() {
   group('CounterScreen', () {
     testWidgets('renders CounterView', (tester) async {
-      await tester.pumpApp(CounterScreen());
+      await tester.pumpApp(
+        BlocProvider<CounterCubit>(
+          create: (_) => CounterCubit(),
+          child: const CounterScreen(),
+        ),
+      );
       expect(find.byType(CounterView), findsOneWidget);
     });
   });
@@ -28,18 +34,18 @@ void main() {
     });
 
     testWidgets('renders current count', (tester) async {
-      const state = 42;
+      const state = CounterState(counterValue: 42);
       when(() => counterCubit.state).thenReturn(state);
       await tester.pumpApp(
         BlocProvider.value(value: counterCubit, child: const CounterView()),
       );
-      expect(find.text('$state'), findsOneWidget);
+      expect(find.text('${state.counterValue}'), findsOneWidget);
     });
 
     testWidgets('calls increment when increment button is tapped', (
       tester,
     ) async {
-      when(() => counterCubit.state).thenReturn(0);
+      when(() => counterCubit.state).thenReturn(const CounterState());
       when(() => counterCubit.increment()).thenReturn(null);
       await tester.pumpApp(
         BlocProvider.value(value: counterCubit, child: const CounterView()),
@@ -51,7 +57,7 @@ void main() {
     testWidgets('calls decrement when decrement button is tapped', (
       tester,
     ) async {
-      when(() => counterCubit.state).thenReturn(0);
+      when(() => counterCubit.state).thenReturn(const CounterState());
       when(() => counterCubit.decrement()).thenReturn(null);
       await tester.pumpApp(
         BlocProvider.value(value: counterCubit, child: const CounterView()),

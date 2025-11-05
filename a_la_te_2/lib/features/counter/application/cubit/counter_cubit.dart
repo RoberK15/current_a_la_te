@@ -1,8 +1,13 @@
+import 'package:a_la_te_2/features/counter/application/cubit/counter_state.dart';
 import 'package:bloc/bloc.dart';
 
-class CounterCubit extends Cubit<int> {
-  CounterCubit() : super(0);
+class CounterCubit extends Cubit<CounterState> {
+  CounterCubit() : super(const CounterState());
 
-  void increment() => emit(state + 1);
-  void decrement() => emit(state - 1);
+  void increment() => emit(
+    state.copyWith(counterValue: state.counterValue + 1)
+  );
+  void decrement() => emit(
+    state.copyWith(counterValue: state.counterValue - 1)
+  );
 }
