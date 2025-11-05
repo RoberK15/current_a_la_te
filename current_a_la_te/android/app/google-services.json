@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "216776254887",
+    "project_id": "current-a-la-te",
+    "storage_bucket": "current-a-la-te.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216776254887:android:2626c3ffa38dd03c404282",
+        "android_client_info": {
+          "package_name": "com.rceb98.current_a_la_te"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7Wmoq_ayXl942DX3DAIPOycn2LhEKIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216776254887:android:3b40fc642bfb905f404282",
+        "android_client_info": {
+          "package_name": "com.rceb98.current_a_la_te.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7Wmoq_ayXl942DX3DAIPOycn2LhEKIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216776254887:android:9f84bc30735aa681404282",
+        "android_client_info": {
+          "package_name": "com.rceb98.current_a_la_te.stg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7Wmoq_ayXl942DX3DAIPOycn2LhEKIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
