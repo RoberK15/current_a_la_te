@@ -5,8 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "a_la_te_2",
-            "cwd": "a_la_te_2",
+            "name": "current_a_la_te",
+            "cwd": "current_a_la_te",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",
@@ -18,8 +18,8 @@
             ]
         },
         {
-            "name": "a_la_te_2 (profile mode)",
-            "cwd": "a_la_te_2",
+            "name": "current_a_la_te (profile mode)",
+            "cwd": "current_a_la_te",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
@@ -32,8 +32,8 @@
             ]
         },
         {
-            "name": "a_la_te_2 (release mode)",
-            "cwd": "a_la_te_2",
+            "name": "current_a_la_te (release mode)",
+            "cwd": "current_a_la_te",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
