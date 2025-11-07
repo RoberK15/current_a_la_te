@@ -11,8 +11,9 @@ class ApiExampleRepository implements ExampleRepository {
   @override
   Future<Result<List<Example>, Exception>> getExamples() async {
     try {
-      final examples = 
-        await networkService.get<List<dynamic>>(Endpoints.examples);
+      final examples = await networkService.get<List<dynamic>>(
+        Endpoints.examples,
+      );
 
       final result = <Example>[];
 

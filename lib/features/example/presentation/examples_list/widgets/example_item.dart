@@ -14,10 +14,8 @@ class ExampleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.pushNamed(
-        AppRoute.exampleDetail.name,
-        extra: example
-      ),
+      onTap: () =>
+          context.pushNamed(AppRoute.exampleDetail.name, extra: example),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(16),

@@ -10,7 +10,8 @@ import 'package:mocktail/mocktail.dart';
 
 import '../../helpers/helpers.dart';
 
-class MockCounterCubit extends MockCubit<CounterState> implements CounterCubit {}
+class MockCounterCubit extends MockCubit<CounterState>
+    implements CounterCubit {}
 
 void main() {
   group('CounterScreen', () {

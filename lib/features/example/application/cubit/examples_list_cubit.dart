@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ExamplesListCubit extends Cubit<ExamplesListState> {
   ExamplesListCubit({required ExampleRepository exampleRepository})
-      : _exampleRepository = exampleRepository,
-        super(const ExamplesListState());
+    : _exampleRepository = exampleRepository,
+      super(const ExamplesListState());
 
   final ExampleRepository _exampleRepository;
 
@@ -18,14 +18,14 @@ class ExamplesListCubit extends Cubit<ExamplesListState> {
     result.when(
       (success) => emit(
         state.copyWith(
-            status: StateStatus.success,
-            examples: success,
+          status: StateStatus.success,
+          examples: success,
         ),
       ),
       (error) => emit(
         state.copyWith(
-            status: StateStatus.failure,
-            errorMessage: error.toString(),
+          status: StateStatus.failure,
+          errorMessage: error.toString(),
         ),
       ),
     );

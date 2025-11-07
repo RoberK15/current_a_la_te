@@ -9,16 +9,17 @@ import 'package:get_it/get_it.dart';
 final GetIt locator = GetIt.instance;
 const useMocks = true;
 
-Future<void> setupServiceLocator() async{
+Future<void> setupServiceLocator() async {
   locator
     ..registerLazySingleton(Dio.new)
     ..registerLazySingleton<NetworkService>(
-      () => DioClient(locator<Dio>()
-      ),
+      () => DioClient(locator<Dio>()),
     )
     ..registerLazySingleton<ExampleRepository>(
-      () => useMocks ? MockExampleRepository() : ApiExampleRepository(
-        networkService: locator<NetworkService>(),
-      ),
+      () => useMocks
+          ? MockExampleRepository()
+          : ApiExampleRepository(
+              networkService: locator<NetworkService>(),
+            ),
     );
 }

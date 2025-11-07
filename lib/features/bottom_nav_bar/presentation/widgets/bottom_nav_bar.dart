@@ -8,13 +8,12 @@ class BottomNavBar extends StatelessWidget {
     required this.currentRouteIndex,
     super.key,
   });
-  
+
   final List<BottomNavBarOptionModel> options;
   final int currentRouteIndex;
 
   @override
   Widget build(BuildContext context) {
-
     return BottomNavigationBar(
       currentIndex: currentRouteIndex >= 0 ? currentRouteIndex : 0,
       items: List.generate(
@@ -30,12 +29,10 @@ class BottomNavBar extends StatelessWidget {
     );
   }
 
-  BottomNavigationBarItem _buildNavItem(
-    {
+  BottomNavigationBarItem _buildNavItem({
     required IconData icon,
     required String label,
-    }
-  ) {
+  }) {
     return BottomNavigationBarItem(
       icon: Icon(icon),
       label: label,

@@ -10,15 +10,15 @@ class BottomNavBarScreen extends StatelessWidget {
     required this.currentRouteLocation,
     super.key,
   });
-  
+
   final String currentRouteLocation;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    context.
-      read<BottomNavBarCubit>()
-      .updateCurrentRouteLocation(currentRouteLocation);
+    context.read<BottomNavBarCubit>().updateCurrentRouteLocation(
+      currentRouteLocation,
+    );
 
     return BlocBuilder<BottomNavBarCubit, BottomNavBarState>(
       builder: (context, state) => Scaffold(

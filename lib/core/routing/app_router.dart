@@ -18,8 +18,8 @@ enum AppRoute {
 }
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
-final GlobalKey<NavigatorState> _shellNavigatorKey = 
-GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> _shellNavigatorKey =
+    GlobalKey<NavigatorState>();
 
 final goRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
@@ -59,7 +59,7 @@ final goRouter = GoRouter(
               builder: (context, state) {
                 return ExampleDetailsScreen(
                   example: state.extra as Example,
-                  );
+                );
               },
             ),
           ],

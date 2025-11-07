@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 
 abstract class NetworkService {
-
   Future<Response<T>> get<T>(
     String url, {
     Map<String, dynamic>? queryParameters,
@@ -18,7 +17,7 @@ abstract class NetworkService {
     CancelToken? cancelToken,
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
-  }); 
+  });
 
   Future<Response<T>> put<T>(
     String url, {
@@ -28,7 +27,7 @@ abstract class NetworkService {
     CancelToken? cancelToken,
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
-  }); 
+  });
 
   Future<Response<T>> delete<T>(
     String url, {
@@ -36,7 +35,5 @@ abstract class NetworkService {
     Map<String, dynamic>? queryParameters,
     Options? options,
     CancelToken? cancelToken,
-  });  
-
-
+  });
 }

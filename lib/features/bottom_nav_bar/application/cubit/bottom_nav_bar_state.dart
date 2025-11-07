@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'bottom_nav_bar_state.freezed.dart';
 
 class BottomNavBarOptionModel {
-
-BottomNavBarOptionModel({
+  BottomNavBarOptionModel({
     required this.name,
     required this.icon,
     required this.routeLocation,
@@ -17,7 +15,6 @@ BottomNavBarOptionModel({
   final String routeLocation;
   final IconData icon;
   final String routeName;
-
 }
 
 @freezed

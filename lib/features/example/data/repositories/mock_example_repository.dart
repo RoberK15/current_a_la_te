@@ -17,7 +17,7 @@ class MockExampleRepository implements ExampleRepository {
             id: index.toString(),
             title: 'Ejemplo número ${index + 1}',
             description:
-              'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+                'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
           ),
         ),
       );

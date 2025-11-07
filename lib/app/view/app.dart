@@ -13,7 +13,7 @@ class App extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create:  (_) => BottomNavBarCubit()..init(),
+          create: (_) => BottomNavBarCubit()..init(),
         ),
         BlocProvider(
           create: (_) => CounterCubit(),
@@ -26,10 +26,10 @@ class App extends StatelessWidget {
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           ),
           useMaterial3: true,
-      ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      routerConfig: goRouter,
+        ),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        routerConfig: goRouter,
       ),
     );
   }

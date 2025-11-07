@@ -42,7 +42,7 @@ class CounterView extends StatelessWidget {
               FloatingActionButton(
                 onPressed: () => context.read<CounterCubit>().decrement(),
                 child: const Icon(Icons.remove),
-            ),
+              ),
             ],
           ),
         );
@@ -52,7 +52,7 @@ class CounterView extends StatelessWidget {
 }
 
 class CounterText extends StatelessWidget {
-  const CounterText({ required this.counterValue, super.key});
+  const CounterText({required this.counterValue, super.key});
 
   final int counterValue;
 
