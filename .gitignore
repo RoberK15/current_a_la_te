@@ -20,19 +20,11 @@ migrate_working_dir/
 .classpath
 .project
 .settings/
-.vscode/*
 
 # Environment configuration files
 .env
 .env.*
 *.env.*
-
-# Firebase related
-**/ios/Runner/GoogleService-Info.plist
-**/android/app/google-services.json
-lib/firebase_options.dart
-firebase.json
-.firebaserc
 
 # Temporary files
 *.tmp
