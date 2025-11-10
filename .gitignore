@@ -20,6 +20,7 @@ migrate_working_dir/
 .classpath
 .project
 .settings/
+.vscode/*
 
 # Environment configuration files
 .env
@@ -49,6 +50,8 @@ linked_*.ds
 unlinked.ds
 unlinked_spec.ds
 .fvm/
+macos/
+windows/
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -115,6 +118,8 @@ app.*.map.json
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+!.vscode/extensions.json
+!.vscode/launch.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
